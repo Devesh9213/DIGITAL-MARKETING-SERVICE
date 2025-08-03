@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixsedit Case Study - awcooz Digital Marketing</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .case-study-hero {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .case-study-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+        
+        .case-study-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .case-study-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            text-align: center;
+        }
+        
+        .meta-item h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .case-study-content {
+            padding: 4rem 0;
+        }
+        
+        .case-study-section {
+            margin-bottom: 4rem;
+        }
+        
+        .case-study-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+            letter-spacing: -0.025em;
+        }
+        
+        .case-study-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+        
+        .challenge-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .challenge, .solution {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .challenge h3, .solution h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .result-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .result-card h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .result-card p {
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        .testimonial-large {
+            background: #f8fafc;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .testimonial-large p {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .author-info h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info span {
+            color: #6b7280;
+        }
+        
+        .back-to-portfolio {
+            text-align: center;
+            margin: 4rem 0;
+        }
+        
+        .back-to-portfolio a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .back-to-portfolio a:hover {
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .challenge-solution {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-study-meta {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>awcooz</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="../index.html#contact" class="btn btn-outline">Get Quote</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container">
+            <h1>Pixsedit - Complete Digital Transformation</h1>
+            <p>A comprehensive digital transformation project that revolutionized Pixsedit's online presence and business growth</p>
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <h3>300%</h3>
+                    <p>Traffic Increase</p>
+                </div>
+                <div class="meta-item">
+                    <h3>150%</h3>
+                    <p>Lead Generation</p>
+                </div>
+                <div class="meta-item">
+                    <h3>8 Weeks</h3>
+                    <p>Project Duration</p>
+                </div>
+                <div class="meta-item">
+                    <h3>95%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <section class="case-study-content">
+        <div class="container">
+            <div class="case-study-section">
+                <h2>Project Overview</h2>
+                <p>Pixsedit, a leading image editing service provider, approached awcooz with a challenge: their existing website was outdated, slow, and not converting visitors into customers effectively. They needed a complete digital transformation that would modernize their brand, improve user experience, and drive business growth.</p>
+                
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>The Challenge</h3>
+                        <ul>
+                            <li>Outdated website design and poor user experience</li>
+                            <li>Slow loading times affecting SEO and conversions</li>
+                            <li>Lack of clear value proposition and call-to-actions</li>
+                            <li>No mobile optimization</li>
+                            <li>Poor lead generation and conversion rates</li>
+                        </ul>
+                    </div>
+                    <div class="solution">
+                        <h3>Our Solution</h3>
+                        <ul>
+                            <li>Complete website redesign with modern UI/UX</li>
+                            <li>Performance optimization and SEO improvements</li>
+                            <li>Strategic content creation and lead generation</li>
+                            <li>Mobile-first responsive design</li>
+                            <li>Conversion rate optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-section">
+                <h2>Our Approach</h2>
+                <p>We implemented a comprehensive digital strategy that focused on understanding Pixsedit's target audience, optimizing their online presence, and creating a seamless user experience that would drive conversions.</p>
+                
+                <h3>Phase 1: Discovery & Strategy</h3>
+                <p>We conducted extensive market research, competitor analysis, and user behavior studies to understand Pixsedit's unique value proposition and target audience needs.</p>
+                
+                <h3>Phase 2: Design & Development</h3>
+                <p>Our design team created a modern, user-friendly interface that highlighted Pixsedit's services and made it easy for potential customers to understand their offerings and take action.</p>
+                
+                <h3>Phase 3: Content & SEO</h3>
+                <p>We developed compelling content that addressed customer pain points and optimized the website for search engines to improve organic visibility.</p>
+                
+                <h3>Phase 4: Launch & Optimization</h3>
+                <p>After launching the new website, we continuously monitored performance and made data-driven optimizations to improve conversion rates and user engagement.</p>
+            </div>
+
+            <div class="case-study-section">
+                <h2>Results & Impact</h2>
+                <p>The digital transformation project delivered exceptional results that exceeded Pixsedit's expectations and significantly improved their business performance.</p>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>300%</h3>
+                        <p>Increase in Website Traffic</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>150%</h3>
+                        <p>Improvement in Lead Generation</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>85%</h3>
+                        <p>Faster Page Load Speed</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>200%</h3>
+                        <p>Increase in Conversion Rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-section">
+                <h2>Client Testimonial</h2>
+                <div class="testimonial-large">
+                    <p>"Working with awcooz was an absolute game-changer for our business. Their team not only delivered a stunning new website but also helped us understand our customers better. The results have been incredible - our traffic has tripled and we're generating more leads than ever before. The attention to detail and strategic approach made all the difference."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>John Davis</h4>
+                            <span>CEO, Pixsedit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-section">
+                <h2>Technologies & Services Used</h2>
+                <div class="services-used">
+                    <div class="service-tag">Web Design</div>
+                    <div class="service-tag">UI/UX Design</div>
+                    <div class="service-tag">SEO Optimization</div>
+                    <div class="service-tag">Content Strategy</div>
+                    <div class="service-tag">Performance Optimization</div>
+                    <div class="service-tag">Conversion Rate Optimization</div>
+                </div>
+            </div>
+
+            <div class="back-to-portfolio">
+                <a href="../index.html#portfolio">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>awcooz</h3>
+                    <p>Your trusted partner for digital marketing success. We help businesses grow, engage, and succeed in the digital world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../index.html#services">Branding & Strategy</a></li>
+                        <li><a href="../index.html#services">Photography & Videography</a></li>
+                        <li><a href="../index.html#services">Website Development</a></li>
+                        <li><a href="../index.html#services">Social Media Management</a></li>
+                        <li><a href="../index.html#services">Ad Campaigns</a></li>
+                        <li><a href="../index.html#services">Image Editing Service</a></li>
+                        <li><a href="../index.html#services">SEO Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../index.html#about">About Us</a></li>
+                        <li><a href="../index.html#portfolio">Portfolio</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../index.html#portfolio">Case Studies</a></li>
+                        <li><a href="#">Free Tools</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 awcooz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

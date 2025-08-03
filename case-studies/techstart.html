@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStart Inc. Case Study - awcooz Digital Marketing</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .case-study-hero {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .case-study-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+        
+        .case-study-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .case-study-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            text-align: center;
+        }
+        
+        .meta-item h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .case-study-content {
+            padding: 4rem 0;
+        }
+        
+        .case-study-section {
+            margin-bottom: 4rem;
+        }
+        
+        .case-study-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+            letter-spacing: -0.025em;
+        }
+        
+        .case-study-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+        
+        .challenge-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .challenge, .solution {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .challenge h3, .solution h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .result-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .result-card h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .result-card p {
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        .testimonial-large {
+            background: #f8fafc;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .testimonial-large p {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .author-info h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info span {
+            color: #6b7280;
+        }
+        
+        .back-to-portfolio {
+            text-align: center;
+            margin: 4rem 0;
+        }
+        
+        .back-to-portfolio a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .back-to-portfolio a:hover {
+            gap: 1rem;
+        }
+        
+        .services-used {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .service-tag {
+            background: #3b82f6;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .challenge-solution {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-study-meta {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>awcooz</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="../index.html#contact" class="btn btn-outline">Get Quote</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container">
+            <h1>TechStart Inc. - SEO & Lead Generation</h1>
+            <p>A comprehensive SEO optimization and lead generation strategy that transformed TechStart's online presence</p>
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <h3>400%</h3>
+                    <p>Organic Traffic</p>
+                </div>
+                <div class="meta-item">
+                    <h3>250%</h3>
+                    <p>Lead Generation</p>
+                </div>
+                <div class="meta-item">
+                    <h3>12 Weeks</h3>
+                    <p>Project Duration</p>
+                </div>
+                <div class="meta-item">
+                    <h3>97%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <section class="case-study-content">
+        <div class="container">
+            <div class="case-study-section">
+                <h2>Project Overview</h2>
+                <p>TechStart Inc., a promising tech startup, was struggling with low online visibility and poor lead generation despite having an innovative product. They approached awcooz to develop a comprehensive SEO strategy and lead generation system that would increase their organic traffic and convert visitors into qualified leads.</p>
+                
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>The Challenge</h3>
+                        <ul>
+                            <li>Low search engine rankings and poor online visibility</li>
+                            <li>Inadequate lead generation and conversion rates</li>
+                            <li>Lack of content strategy and keyword optimization</li>
+                            <li>Poor website structure and technical SEO issues</li>
+                            <li>Limited understanding of target audience behavior</li>
+                        </ul>
+                    </div>
+                    <div class="solution">
+                        <h3>Our Solution</h3>
+                        <ul>
+                            <li>Comprehensive SEO audit and technical optimization</li>
+                            <li>Strategic content creation and keyword targeting</li>
+                            <li>Lead generation funnel development</li>
+                            <li>Website structure and user experience improvements</li>
+                            <li>Ongoing SEO monitoring and optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-section">
+                <h2>Our Approach</h2>
+                <p>We implemented a data-driven SEO and lead generation strategy that focused on understanding TechStart's target audience, optimizing their online presence, and creating effective conversion pathways.</p>
+                
+                <h3>Phase 1: SEO Audit & Research</h3>
+                <p>We conducted a comprehensive SEO audit to identify technical issues, analyzed competitor strategies, and researched high-value keywords that would drive qualified traffic to TechStart's website.</p>
+                
+                <h3>Phase 2: Technical SEO Optimization</h3>
+                <p>Our technical team fixed website structure issues, improved page load speeds, optimized meta tags, and implemented schema markup to enhance search engine visibility.</p>
+                
+                <h3>Phase 3: Content Strategy & Creation</h3>
+                <p>We developed a content strategy that addressed user intent and created high-quality, SEO-optimized content that would rank for target keywords and engage potential customers.</p>
+                
+                <h3>Phase 4: Lead Generation & Conversion</h3>
+                <p>We designed and implemented lead generation funnels, optimized landing pages, and created compelling call-to-actions to convert visitors into qualified leads.</p>
+            </div>
+
+            <div class="case-study-section">
+                <h2>Results & Impact</h2>
+                <p>The SEO and lead generation project delivered exceptional results that significantly improved TechStart's online visibility and business growth.</p>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>400%</h3>
+                        <p>Increase in Organic Traffic</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>250%</h3>
+                        <p>Improvement in Lead Generation</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>85%</h3>
+                        <p>Increase in Keyword Rankings</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>300%</h3>
+                        <p>Growth in Qualified Leads</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-section">
+                <h2>Client Testimonial</h2>
+                <div class="testimonial-large">
+                    <p>"awcooz's SEO and lead generation expertise transformed our business. Their strategic approach to content creation and technical optimization helped us achieve remarkable growth in organic traffic and lead generation. The results exceeded our expectations, and we're now generating more qualified leads than ever before. Their ongoing support and optimization efforts continue to drive our success."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>CEO, TechStart Inc.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-section">
+                <h2>Technologies & Services Used</h2>
+                <div class="services-used">
+                    <div class="service-tag">SEO Optimization</div>
+                    <div class="service-tag">Technical SEO</div>
+                    <div class="service-tag">Content Strategy</div>
+                    <div class="service-tag">Lead Generation</div>
+                    <div class="service-tag">Keyword Research</div>
+                    <div class="service-tag">Conversion Optimization</div>
+                </div>
+            </div>
+
+            <div class="back-to-portfolio">
+                <a href="../index.html#portfolio">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>awcooz</h3>
+                    <p>Your trusted partner for digital marketing success. We help businesses grow, engage, and succeed in the digital world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../index.html#services">Branding & Strategy</a></li>
+                        <li><a href="../index.html#services">Photography & Videography</a></li>
+                        <li><a href="../index.html#services">Website Development</a></li>
+                        <li><a href="../index.html#services">Social Media Management</a></li>
+                        <li><a href="../index.html#services">Ad Campaigns</a></li>
+                        <li><a href="../index.html#services">Image Editing Service</a></li>
+                        <li><a href="../index.html#services">SEO Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../index.html#about">About Us</a></li>
+                        <li><a href="../index.html#portfolio">Portfolio</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../index.html#portfolio">Case Studies</a></li>
+                        <li><a href="#">Free Tools</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 awcooz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

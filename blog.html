@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - awcooz Digital Marketing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+        
+        .blog-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .blog-content {
+            padding: 4rem 0;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .blog-main {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        
+        .blog-post {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-post-image {
+            height: 250px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .blog-post-content {
+            padding: 2rem;
+        }
+        
+        .blog-post-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        
+        .blog-post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .blog-post h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+            line-height: 1.3;
+        }
+        
+        .blog-post p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-post-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .blog-tag {
+            background: #f3f4f6;
+            color: #4b5563;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .read-more {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+        
+        .read-more:hover {
+            gap: 1rem;
+        }
+        
+        .blog-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .sidebar-widget {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .sidebar-widget h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .search-box button {
+            padding: 0.75rem 1rem;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .search-box button:hover {
+            background: #2563eb;
+        }
+        
+        .category-list {
+            list-style: none;
+        }
+        
+        .category-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .category-list a {
+            color: #6b7280;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+        
+        .category-list a:hover {
+            color: #3b82f6;
+        }
+        
+        .category-count {
+            background: #f3f4f6;
+            color: #4b5563;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        
+        .recent-posts {
+            list-style: none;
+        }
+        
+        .recent-posts li {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .recent-posts li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .recent-posts a {
+            color: #1f2937;
+            text-decoration: none;
+            font-weight: 500;
+            line-height: 1.4;
+            transition: color 0.3s ease;
+        }
+        
+        .recent-posts a:hover {
+            color: #3b82f6;
+        }
+        
+        .recent-post-date {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+        
+        .blog-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+        
+        .pagination-btn {
+            padding: 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            background: white;
+            color: #4b5563;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination-btn:hover,
+        .pagination-btn.active {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>awcooz</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="index.html#contact" class="btn btn-outline">Get Quote</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Digital Marketing Blog</h1>
+            <p>Insights, tips, and strategies to help your business grow in the digital world</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-grid">
+                <div class="blog-main">
+                    <article class="blog-post">
+                        <div class="blog-post-image">
+                            <img src="blog-posts/images/seo-strategies.jpg" alt="SEO Strategies for 2024" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> March 15, 2024</span>
+                                <span><i class="fas fa-user"></i> awcooz Team</span>
+                                <span><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h2>10 Essential SEO Strategies for 2024</h2>
+                            <p>Discover the most effective SEO strategies that will help your website rank higher in search engines and drive more organic traffic to your business in 2024.</p>
+                            <div class="blog-post-tags">
+                                <span class="blog-tag">SEO</span>
+                                <span class="blog-tag">Digital Marketing</span>
+                                <span class="blog-tag">Strategy</span>
+                            </div>
+                            <a href="blog-posts/seo-strategies-2024.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="blog-post-image">
+                            <img src="blog-posts/images/brand-identity.jpg" alt="Brand Identity Design" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> March 12, 2024</span>
+                                <span><i class="fas fa-user"></i> awcooz Team</span>
+                                <span><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
+                            <h2>How to Create a Strong Brand Identity</h2>
+                            <p>Learn the key elements of building a memorable brand identity that resonates with your target audience and sets you apart from competitors.</p>
+                            <div class="blog-post-tags">
+                                <span class="blog-tag">Branding</span>
+                                <span class="blog-tag">Design</span>
+                                <span class="blog-tag">Marketing</span>
+                            </div>
+                            <a href="blog-posts/brand-identity.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="blog-post-image">
+                            <img src="blog-posts/images/social-media-trends.jpg" alt="Social Media Marketing Trends" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> March 10, 2024</span>
+                                <span><i class="fas fa-user"></i> awcooz Team</span>
+                                <span><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h2>Social Media Marketing Trends for 2024</h2>
+                            <p>Stay ahead of the curve with the latest social media marketing trends that will dominate 2024 and help you engage your audience effectively.</p>
+                            <div class="blog-post-tags">
+                                <span class="blog-tag">Social Media</span>
+                                <span class="blog-tag">Trends</span>
+                                <span class="blog-tag">Marketing</span>
+                            </div>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="blog-post-image">
+                            <img src="blog-posts/images/conversion-optimization.jpg" alt="Conversion Rate Optimization" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> March 8, 2024</span>
+                                <span><i class="fas fa-user"></i> awcooz Team</span>
+                                <span><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h2>Conversion Rate Optimization: Best Practices</h2>
+                            <p>Discover proven strategies to improve your website's conversion rate and turn more visitors into paying customers.</p>
+                            <div class="blog-post-tags">
+                                <span class="blog-tag">CRO</span>
+                                <span class="blog-tag">Conversion</span>
+                                <span class="blog-tag">Optimization</span>
+                            </div>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="blog-post-image">
+                            <img src="blog-posts/images/google-vs-facebook-ads.jpg" alt="Google Ads vs Facebook Ads" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> March 5, 2024</span>
+                                <span><i class="fas fa-user"></i> awcooz Team</span>
+                                <span><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h2>Google Ads vs Facebook Ads: Which is Better?</h2>
+                            <p>Compare the pros and cons of Google Ads and Facebook Ads to determine which platform is best for your business goals and budget.</p>
+                            <div class="blog-post-tags">
+                                <span class="blog-tag">Google Ads</span>
+                                <span class="blog-tag">Facebook Ads</span>
+                                <span class="blog-tag">PPC</span>
+                            </div>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="blog-post-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> March 3, 2024</span>
+                                <span><i class="fas fa-user"></i> awcooz Team</span>
+                                <span><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
+                            <h2>Mobile-First Design: Why It Matters</h2>
+                            <p>Learn why mobile-first design is crucial for your website's success and how to implement it effectively for better user experience.</p>
+                            <div class="blog-post-tags">
+                                <span class="blog-tag">Mobile</span>
+                                <span class="blog-tag">Design</span>
+                                <span class="blog-tag">UX</span>
+                            </div>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="blog-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Search</h3>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search articles...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">SEO <span class="category-count">15</span></a></li>
+                            <li><a href="#">Social Media <span class="category-count">12</span></a></li>
+                            <li><a href="#">Branding <span class="category-count">8</span></a></li>
+                            <li><a href="#">Web Design <span class="category-count">10</span></a></li>
+                            <li><a href="#">Digital Marketing <span class="category-count">20</span></a></li>
+                            <li><a href="#">PPC <span class="category-count">6</span></a></li>
+                            <li><a href="#">Content Marketing <span class="category-count">9</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Recent Posts</h3>
+                        <ul class="recent-posts">
+                            <li>
+                                <a href="#">10 Essential SEO Strategies for 2024</a>
+                                <div class="recent-post-date">March 15, 2024</div>
+                            </li>
+                            <li>
+                                <a href="#">How to Create a Strong Brand Identity</a>
+                                <div class="recent-post-date">March 12, 2024</div>
+                            </li>
+                            <li>
+                                <a href="#">Social Media Marketing Trends for 2024</a>
+                                <div class="recent-post-date">March 10, 2024</div>
+                            </li>
+                            <li>
+                                <a href="#">Conversion Rate Optimization: Best Practices</a>
+                                <div class="recent-post-date">March 8, 2024</div>
+                            </li>
+                            <li>
+                                <a href="#">Google Ads vs Facebook Ads: Which is Better?</a>
+                                <div class="recent-post-date">March 5, 2024</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Subscribe to Newsletter</h3>
+                        <p>Get the latest digital marketing insights delivered to your inbox.</p>
+                        <div class="search-box">
+                            <input type="email" placeholder="Enter your email">
+                            <button>Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-pagination">
+                <a href="#" class="pagination-btn active">1</a>
+                <a href="#" class="pagination-btn">2</a>
+                <a href="#" class="pagination-btn">3</a>
+                <a href="#" class="pagination-btn">Next</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>awcooz</h3>
+                    <p>Your trusted partner for digital marketing success. We help businesses grow, engage, and succeed in the digital world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Branding & Strategy</a></li>
+                        <li><a href="index.html#services">Photography & Videography</a></li>
+                        <li><a href="index.html#services">Website Development</a></li>
+                        <li><a href="index.html#services">Social Media Management</a></li>
+                        <li><a href="index.html#services">Ad Campaigns</a></li>
+                        <li><a href="index.html#services">Image Editing Service</a></li>
+                        <li><a href="index.html#services">SEO Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#portfolio">Case Studies</a></li>
+                        <li><a href="#">Free Tools</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 awcooz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
