@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professionelle Websites für Kleinunternehmen - Nur 49€ | awcooz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .translation-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .translation-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .price-highlight {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+        
+        .price-highlight h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 800;
+        }
+        
+        .price-highlight .original-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+            font-size: 1.2rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-item i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .english-content {
+            display: none;
+        }
+        
+        .german-content {
+            display: block;
+        }
+        
+        .language-de .english-content {
+            display: none;
+        }
+        
+        .language-de .german-content {
+            display: block;
+        }
+        
+        .language-en .english-content {
+            display: block;
+        }
+        
+        .language-en .german-content {
+            display: none;
+        }
+    </style>
+</head>
+<body class="language-de">
+    <!-- Translation Toggle -->
+    <button class="translation-toggle" onclick="toggleLanguage()">
+        <i class="fas fa-language"></i> 
+        <span class="lang-text">EN</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>awcooz</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link german-content">Startseite</a>
+                    <a href="#home" class="nav-link english-content">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link german-content">Leistungen</a>
+                    <a href="#services" class="nav-link english-content">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link german-content">Portfolio</a>
+                    <a href="#portfolio" class="nav-link english-content">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link german-content">Kontakt</a>
+                    <a href="#contact" class="nav-link english-content">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#contact" class="btn btn-outline german-content">Angebot anfordern</a>
+                <a href="#contact" class="btn btn-outline english-content">Get Quote</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title german-content">Professionelle Websites für Kleinunternehmen</h1>
+                <h1 class="hero-title english-content">Professional Websites for Small Businesses</h1>
+                
+                <p class="hero-subtitle german-content">Erhalten Sie eine vollständig funktionsfähige Website für Ihr Unternehmen oder Portfolio - professionell gestaltet und optimiert für alle Geräte.</p>
+                <p class="hero-subtitle english-content">Get a fully functional website for your business or portfolio - professionally designed and optimized for all devices.</p>
+                
+                <div class="price-highlight">
+                    <div class="original-price german-content">Statt 299€</div>
+                    <div class="original-price english-content">Instead of 299€</div>
+                    <h2>Nur 49€</h2>
+                    <p class="german-content">Einmalige Zahlung - Keine versteckten Kosten</p>
+                    <p class="english-content">One-time payment - No hidden costs</p>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary german-content">Jetzt bestellen</a>
+                    <a href="#contact" class="btn btn-primary english-content">Order Now</a>
+                    <a href="#services" class="btn btn-secondary german-content">Leistungen ansehen</a>
+                    <a href="#services" class="btn btn-secondary english-content">View Services</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-laptop"></i>
+                        <span class="german-content">Responsive Design</span>
+                        <span class="english-content">Responsive Design</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span class="german-content">Mobile Optimiert</span>
+                        <span class="english-content">Mobile Optimized</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-rocket"></i>
+                        <span class="german-content">Schnell & SEO</span>
+                        <span class="english-content">Fast & SEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="german-content">Was ist inklusive?</h2>
+                <h2 class="english-content">What's Included?</h2>
+                <p class="german-content">Alles was Sie für eine professionelle Online-Präsenz benötigen</p>
+                <p class="english-content">Everything you need for a professional online presence</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-palette"></i>
+                    <h3 class="german-content">Professionelles Design</h3>
+                    <h3 class="english-content">Professional Design</h3>
+                    <p class="german-content">Modernes, ansprechendes Design das Ihr Unternehmen optimal präsentiert</p>
+                    <p class="english-content">Modern, appealing design that optimally presents your business</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3 class="german-content">Mobile Optimiert</h3>
+                    <h3 class="english-content">Mobile Optimized</h3>
+                    <p class="german-content">Perfekt auf allen Geräten - Smartphone, Tablet und Desktop</p>
+                    <p class="english-content">Perfect on all devices - smartphone, tablet and desktop</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-search"></i>
+                    <h3 class="german-content">SEO Optimiert</h3>
+                    <h3 class="english-content">SEO Optimized</h3>
+                    <p class="german-content">Bessere Sichtbarkeit in Suchmaschinen für mehr Besucher</p>
+                    <p class="english-content">Better visibility in search engines for more visitors</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3 class="german-content">Schnelle Ladezeiten</h3>
+                    <h3 class="english-content">Fast Loading</h3>
+                    <p class="german-content">Optimierte Performance für bessere Nutzererfahrung</p>
+                    <p class="english-content">Optimized performance for better user experience</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3 class="german-content">Einfache Verwaltung</h3>
+                    <h3 class="english-content">Easy Management</h3>
+                    <p class="german-content">Benutzerfreundliches CMS zum einfachen Aktualisieren von Inhalten</p>
+                    <p class="english-content">User-friendly CMS for easy content updates</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h3 class="german-content">Support inklusive</h3>
+                    <h3 class="english-content">Support Included</h3>
+                    <p class="german-content">30 Tage kostenloser Support nach dem Launch</p>
+                    <p class="english-content">30 days free support after launch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="german-content">So einfach geht's</h2>
+                <h2 class="english-content">How It Works</h2>
+                <p class="german-content">In nur 3 Schritten zu Ihrer neuen Website</p>
+                <p class="english-content">In just 3 steps to your new website</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3 class="german-content">Kontakt aufnehmen</h3>
+                    <h3 class="english-content">Get in Touch</h3>
+                    <p class="german-content">Senden Sie uns eine Nachricht mit Ihren Wünschen und Anforderungen</p>
+                    <p class="english-content">Send us a message with your wishes and requirements</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3 class="german-content">Design & Entwicklung</h3>
+                    <h3 class="english-content">Design & Development</h3>
+                    <p class="german-content">Wir erstellen Ihre Website nach Ihren Vorstellungen und Wünschen</p>
+                    <p class="english-content">We create your website according to your ideas and wishes</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3 class="german-content">Launch & Support</h3>
+                    <h3 class="english-content">Launch & Support</h3>
+                    <p class="german-content">Ihre Website geht online und Sie erhalten kostenlosen Support</p>
+                    <p class="english-content">Your website goes live and you receive free support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="german-content">Beispiel-Websites</h2>
+                <h2 class="english-content">Example Websites</h2>
+                <p class="german-content">Sehen Sie, was wir für andere Kleinunternehmen erstellt haben</p>
+                <p class="english-content">See what we've created for other small businesses</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('portfolio-images/pixsedit-project.jpg'); background-size: cover; background-position: center;">
+                        <div class="portfolio-overlay">
+                            <h3 class="german-content">Fotografie Studio</h3>
+                            <h3 class="english-content">Photography Studio</h3>
+                            <p class="german-content">Professionelle Website für ein Fotografie-Studio mit Portfolio und Buchungssystem</p>
+                            <p class="english-content">Professional website for a photography studio with portfolio and booking system</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('portfolio-images/aplus-creative-project.jpg'); background-size: cover; background-position: center;">
+                        <div class="portfolio-overlay">
+                            <h3 class="german-content">Kreative Agentur</h3>
+                            <h3 class="english-content">Creative Agency</h3>
+                            <p class="german-content">Moderne Website für eine Design- und Marketing-Agentur</p>
+                            <p class="english-content">Modern website for a design and marketing agency</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('portfolio-images/techstart-project.jpg'); background-size: cover; background-position: center;">
+                        <div class="portfolio-overlay">
+                            <h3 class="german-content">Tech Startup</h3>
+                            <h3 class="english-content">Tech Startup</h3>
+                            <p class="german-content">Professionelle Website für ein Technologie-Startup</p>
+                            <p class="english-content">Professional website for a technology startup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="german-content">Bereit für Ihre neue Website?</h2>
+            <h2 class="english-content">Ready for Your New Website?</h2>
+            <p class="german-content">Kontaktieren Sie uns jetzt und erhalten Sie Ihre professionelle Website für nur 49€</p>
+            <p class="english-content">Contact us now and get your professional website for only 49€</p>
+            <a href="#contact" class="btn btn-primary" style="background: white; color: #667eea; margin-top: 20px;">
+                <span class="german-content">Jetzt bestellen</span>
+                <span class="english-content">Order Now</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="german-content">Starten Sie Ihr Projekt</h2>
+                    <h2 class="english-content">Start Your Project</h2>
+                    <p class="german-content">Erzählen Sie uns von Ihrem Unternehmen und wir erstellen Ihnen eine maßgeschneiderte Website.</p>
+                    <p class="english-content">Tell us about your business and we'll create a customized website for you.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+49 17680126855</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>hello@awcooz.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3 class="german-content">Büro</h3>
+                                <h3 class="english-content">Office</h3>
+                                <p>Berlin, Deutschland</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ihr Name" class="german-content" required>
+                            <input type="text" placeholder="Your Name" class="english-content" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Ihre E-Mail" class="german-content" required>
+                            <input type="email" placeholder="Your Email" class="english-content" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Firmenname" class="german-content">
+                        <input type="text" placeholder="Company Name" class="english-content">
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" class="german-content">Website-Typ auswählen</option>
+                            <option value="" class="english-content">Select Website Type</option>
+                            <option value="business" class="german-content">Geschäftswebsite</option>
+                            <option value="business" class="english-content">Business Website</option>
+                            <option value="portfolio" class="german-content">Portfolio</option>
+                            <option value="portfolio" class="english-content">Portfolio</option>
+                            <option value="blog" class="german-content">Blog</option>
+                            <option value="blog" class="english-content">Blog</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Beschreiben Sie Ihr Projekt" rows="5" class="german-content" required></textarea>
+                        <textarea placeholder="Describe your project" rows="5" class="english-content" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="german-content">Nachricht senden</span>
+                        <span class="english-content">Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>awcooz</h3>
+                    <p class="german-content">Ihr vertrauensvoller Partner für professionelle Websites. Wir helfen Kleinunternehmen dabei, online erfolgreich zu sein.</p>
+                    <p class="english-content">Your trusted partner for professional websites. We help small businesses succeed online.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="german-content">Leistungen</h4>
+                    <h4 class="english-content">Services</h4>
+                    <ul>
+                        <li><a href="#services" class="german-content">Website Design</a></li>
+                        <li><a href="#services" class="english-content">Website Design</a></li>
+                        <li><a href="#services" class="german-content">Mobile Optimierung</a></li>
+                        <li><a href="#services" class="english-content">Mobile Optimization</a></li>
+                        <li><a href="#services" class="german-content">SEO Optimierung</a></li>
+                        <li><a href="#services" class="english-content">SEO Optimization</a></li>
+                        <li><a href="#services" class="german-content">Support</a></li>
+                        <li><a href="#services" class="english-content">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="german-content">Unternehmen</h4>
+                    <h4 class="english-content">Company</h4>
+                    <ul>
+                        <li><a href="#about" class="german-content">Über uns</a></li>
+                        <li><a href="#about" class="english-content">About Us</a></li>
+                        <li><a href="#portfolio" class="german-content">Portfolio</a></li>
+                        <li><a href="#portfolio" class="english-content">Portfolio</a></li>
+                        <li><a href="#contact" class="german-content">Kontakt</a></li>
+                        <li><a href="#contact" class="english-content">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 awcooz. <span class="german-content">Alle Rechte vorbehalten.</span><span class="english-content">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            const langText = document.querySelector('.lang-text');
+            
+            if (body.classList.contains('language-de')) {
+                body.classList.remove('language-de');
+                body.classList.add('language-en');
+                langText.textContent = 'DE';
+            } else {
+                body.classList.remove('language-en');
+                body.classList.add('language-de');
+                langText.textContent = 'EN';
+            }
+        }
+
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

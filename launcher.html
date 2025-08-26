@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Launcher</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .launcher-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .launch-button {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .launch-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+        
+        .status {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="launcher-container">
+        <h1>🌐 Website Launcher</h1>
+        <p>Click below to open your German landing page</p>
+        <button class="launch-button" onclick="openLandingPage()">
+            🚀 Open Landing Page
+        </button>
+        <div class="status" id="status">Ready to launch...</div>
+    </div>
+
+    <script>
+        function openLandingPage() {
+            const status = document.getElementById('status');
+            status.textContent = 'Opening landing page...';
+            
+            try {
+                // Open the German landing page in a new tab
+                window.open('landing-de.html', '_blank');
+                status.textContent = '✅ Landing page opened successfully!';
+                
+                // Reset status after 3 seconds
+                setTimeout(() => {
+                    status.textContent = 'Ready to launch...';
+                }, 3000);
+                
+            } catch (error) {
+                status.textContent = '❌ Error opening page. Please check if landing-de.html exists.';
+                console.error('Error:', error);
+            }
+        }
+        
+        // Auto-open after 2 seconds
+        setTimeout(() => {
+            openLandingPage();
+        }, 2000);
+        
+        // Add keyboard shortcut (Enter key)
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                openLandingPage();
+            }
+        });
+    </script>
+</body>
+</html>
